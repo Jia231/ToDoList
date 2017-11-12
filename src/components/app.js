@@ -27,9 +27,10 @@ export default class App extends Component {
       name:task,
       done:false
     }
-    //let newState = update(this.state.tasks, {$push: [newTask]})
-    this.state.tasks.push(newTask)
-    this.setState({tasks:this.state.tasks,term:''});
+    let newState = update(this.state.tasks, {$push: [newTask]})
+    //this.state.tasks.push(newState)
+    //console.log(newState);
+    this.setState({tasks:newState,term:''});
       //console.log('this is the new state',this.state.tasks)
   }
   filterElement(filter,tasks){
